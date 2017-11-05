@@ -1,0 +1,10 @@
+{
+    "name": "aashari/simple-php-mvc",
+    "authors": [
+        {
+            "name": "Andi Muqsith Ashari",
+            "email": "mq.aashari@gmail.com"
+        }
+    ],
+    "require": {}
+}
