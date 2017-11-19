@@ -10,6 +10,11 @@ $uri = ltrim(rtrim($uri,'/'),'/');
 #explode url by slash
 $uri = explode('/', $uri);
 
+#getHTTPMethod 
+$requestMethod = @$_SERVER['REQUEST_METHOD'];
+$requestMethod = strtolower($requestMethod);
+if(empty($requestMethod)) $requestMethod = "get";
+
 #setting default controller and method
 $controller = "home";
 $method = "index";

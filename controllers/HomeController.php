@@ -5,7 +5,7 @@ class HomeController extends Controller {
     private $users;
 
     public function __construct(){
-        $this->users = load("models","Users");
+        //$this->users = load("models","Users");
     }
 
     public function index(){
