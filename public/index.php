@@ -57,7 +57,13 @@ require_once("../models/Model.php");
 if(file_exists($path)){
     require_once($path);
     $controller = new $controller();
-    echo $controller->$method($parameters);
+    
+    if(method_exists($controller,$requestMethod.$method)){
+        echo $controller->{$requestMethod.$method}($parameters);    
+    }else{
+        echo $controller->$method($parameters);
+    }
+    
 }else{
     echo "Controller not found!";
     exit();
