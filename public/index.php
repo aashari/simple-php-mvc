@@ -21,13 +21,16 @@ $currentRoute = $routes[$uri][$requestMethod];
 $currentRoute = explode('@',$currentRoute);
 
 #translate the controller
-$controller = $currentRoute[0];
+$controllerFile = $currentRoute[0];
+
+$controller = explode("/",$controllerFile);
+$controller = end($controller);
 
 #translate the method
 $method = $currentRoute[1];
 
 #require controller
-$path = "../controllers/".$controller.".php";
+$path = "../controllers/".$controllerFile.".php";
 
 #require controller
 require_once("../controllers/Controller.php");
