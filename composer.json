@@ -7,7 +7,5 @@
         }
     ],
     "require": {
-        "paquettg/php-html-parser": "^1.7",
-        "mongodb/mongodb": "^1.2"
     }
 }
