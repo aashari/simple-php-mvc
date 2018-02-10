@@ -37,7 +37,7 @@ require_once("../models/Model.php");
 if(file_exists($path)){
     require_once($path);
     $controller = new $controller();
-    echo $controller->$method($parameters);
+    echo $controller->$method();
 }else{
     echo "Controller not found!";
     exit();
@@ -46,10 +46,6 @@ if(file_exists($path)){
 function load($type,$name){
     require_once("../".$type."/".$name.".php");
     return new $name;
-}
-
-function view($name){
-    return file_get_contents("../views/".$name.".view.php");
 }
 
 function config(){
