@@ -1,18 +1,26 @@
-<?php 
+<?php
 
-class HomeController extends Controller {
+class HomeController extends Controller
+{
 
     private $users;
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         //$this->users = load("models","Users");
     }
 
-    public function index(){
-        return $this->view('index.html',[
+    public function index()
+    {
+        return $this->view('index.html', [
             'name' => 'Andi Muqsith Ashari'
         ]);
+    }
+
+    public function testing($params)
+    {
+        echo json_encode($params);
     }
 
 }
